@@ -18,6 +18,10 @@ p{
   margin-top: 3%;
 }
 
+a{
+  color: black;
+}
+
 
 .content{
   padding: 3% 7%;
@@ -107,6 +111,24 @@ p{
 
   }
 
+
+/* Footer */
+
+#footer{
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: #FAFAFA;
+}
+
+
+.social-tags{
+  margin:  20px 10px;
+}
+
+.copyright{
+  font-size: 0.8rem;
+}
 
 
   @media (max-width: 1028px){
