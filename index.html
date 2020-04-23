@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Geo Impact High Development Zones</title>
+
+  <!-- styles -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;300&family=Playfair+Display&display=swap" rel="stylesheet">
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script src="https://kit.fontawesome.com/57ff16a27d.js" crossorigin="anonymous"></script>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+
+</head>
+
+<body>
+  <section id="title">
+    <nav class="navbar navbar-expand-lg navbar-right navbar-light ">
+      <a class="navbar-brand" href="#"><i class="fas fa-globe-americas fa-2x "></i><span class="company-name">Geo Impact</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#LA">Los Angeles <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#SF">San Francisco</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Project</a>
+          </li>
+
+        </ul>
+    </nav>
+    <h1 class="titles">High Development Zones</h1>
+  </section>
+
+  <section class='content' id='LA'>
+    <h3 class="header">Los Angeles</h3>
+    <div class='map' id="LAmap"></div>
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoiYmVubnlmcmllZG1hbjIiLCJhIjoiY2s5YzIwZHliMDBqaDNsbjgyeXB1MDdybCJ9.FANNsUZRFIzmBFsaRdq2SQ';
+      var map = new mapboxgl.Map({
+        container: 'LAmap', // container id
+        style: 'mapbox://styles/bennyfriedman2/ck9cf2hhc0hmi1ip7ceeqgn8q', // stylesheet location
+        center: [-118.24368, 34.05223], // starting position [lng, lat]
+        zoom: 9 // starting zoom
+      });
+    </script>
+
+    <p>Los Angeles county has seen an unprecedented boom in new large developments and renovations. Making use of data from filed CEQA environmental impact reports and statements, the hot spots of development in the county become clear. Much of the
+      development has been focused in the Downtown area and along the Sunset Blvd. corridor. Other zones of high development include Burbank, Pasadena, Hermosa Beach and El Segundo.</p>
+
+  </section>
+
+  <section class='content' id='SF'>
+    <h3 class="header">San Francisco</h3>
+    <div class="map" id="SFmap"></div>
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoiYmVubnlmcmllZG1hbjIiLCJhIjoiY2s5YzIwZHliMDBqaDNsbjgyeXB1MDdybCJ9.FANNsUZRFIzmBFsaRdq2SQ';
+      var map = new mapboxgl.Map({
+        container: 'SFmap', // container id
+        style: 'mapbox://styles/bennyfriedman2/ck9d8micy00w41jrxh1lhmz54', // stylesheet location
+        center: [-122.431297, 37.773972], // starting position [lng, lat]
+        zoom: 11 // starting zoom
+      });
+    </script>
+
+    <p>To get an idea of development trends in San Francisco, I used data from CEQA, to find where large residential, commercial and office projects were taking place. I limited the data to projects that have filed since 2018. With luck this map
+      actually shows areas that may not have seen the development take place yet. This is because usually projects need to go through CEQA even before they break ground. It looks like much of the planned projects are in SOMA, NOPA, Embarcadero, and
+      the Dog Patch – Potrero Hill area. </p>
+  </section>
+
+
+  <section id="about">
+    <h2 class="section-title">About the Project</h2>
+    <div class="content">
+      <div class="pro-pic-container">
+        <img class="pro-pic" src="images/Benny.jpg" alt="benny-pic">
+      </div>
+      <p class="about-text">Hello everyone. My name is Benny. Thanks for checking out my maps! Geo Impact used to be a company that I founded focused on creating better urban data and models for the world. However, like many great ideas...it didn't
+        work. So now I am just using the name and the skills I learned through starting the company to make interesting maps for people like you to look at! I don't know where this is going to go, but hopefully somewhere cool. Thanks again for
+        checking it out.</p>
+    </div>
+  </section>
+
+
+</body>
+
+</html>
